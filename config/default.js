@@ -5,6 +5,9 @@ module.exports = {
 
     database: {
         path: 'mongodb://localhost/',
-        name: 'lifeopt'
+        name: 'adcor'
+    },
+    excel: {
+        url:''
     }
 };

@@ -1,0 +1,57 @@
+
+<div ng-init="init()">
+
+    <div class="row upper">
+        <div class="col-md-1 col-md-offset-1">
+            <button ng-click="add()" class="btn btn-primary">Add new Course</button>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+            <input type="text" class="form-control" ng-model="searchText" placeholder="Search"  />
+        </div>
+
+    </div>
+
+
+    <div class="row upper">
+        <table class="table">
+            <tr>
+                <th>Course Name</th>
+                <th>Location</th>
+                <th>Start</th>
+                <th>Length</th>
+                <th>Price</th>
+            </tr>
+
+            <tr ng-repeat="course in courses | filter:searchText track by $index">
+                <td><i class="fa fa-external-link" ng-click="edit()" aria-hidden="true"></i><i ng-click="delete($index)" class="fa fa-times" aria-hidden="true"></i>{{course.courseName}}</td>
+                <td>{{course.location}}</td>
+                <td>{{course.start}}</td>
+                <td>{{course.length}}</td>
+                <td>{{course.price}}</td>
+                <!--<td>&#122</td>-->
+            </tr>
+
+        </table>
+
+
+    </div>
+
+    <div class="row">
+        <ul class="pagination">
+            <li><a ng-click="courses(1)" href="#">1</a></li>
+            <li><a ng-click="courses(2)" href="#">2</a></li>
+            <li><a ng-click="courses(3)" href="#">3</a></li>
+            <li><a ng-click="courses(4)" href="#">4</a></li>
+            <li><a ng-click="courses(5)" href="#">6</a></li>
+            <li><a ng-click="courses(6)" href="#">7</a></li>
+            <li><a ng-click="courses(7)" href="#">8</a></li>
+            <li><a ng-click="courses(8)" href="#">9</a></li>
+            <li><a ng-click="courses(9)" href="#">10</a></li>
+            <li><a href="#">></a></li>
+            <li><a href="#">>></a></li>
+        </ul>
+    </div>
+
+
+    </div>
+</div>
