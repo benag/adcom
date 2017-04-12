@@ -60,6 +60,6 @@ app.get('/currency/:val', routes.getCurrency);
 
 
 courseController.init();
-app.listen(3000, function(){
+app.listen(3003, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
